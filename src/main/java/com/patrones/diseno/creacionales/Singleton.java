@@ -27,4 +27,12 @@ public class Singleton {
     public void mostrarMensaje() {
         System.out.println("Hola desde Singleton!");
     }
+
+    // Ejemplo de uso del patrón Singleton
+    public static void main(String[] args) {
+        Singleton instancia1 = Singleton.getInstancia();
+        Singleton instancia2 = Singleton.getInstancia();
+        instancia1.mostrarMensaje();
+        System.out.println("¿Es la misma instancia? " + (instancia1 == instancia2));
+    }
 }

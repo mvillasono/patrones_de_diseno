@@ -37,3 +37,12 @@ public class Adapter implements Enchufe {
         enchufeEuropeo.conectarEuropeo();
     }
 }
+
+// Ejemplo de uso del patrón Adapter
+class AdapterDemo {
+    public static void main(String[] args) {
+        EnchufeEuropeo enchufeEuropeo = new EnchufeEuropeo();
+        Enchufe adaptador = new Adapter(enchufeEuropeo);
+        adaptador.conectar();
+    }
+}

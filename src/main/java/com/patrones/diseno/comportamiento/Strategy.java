@@ -42,3 +42,14 @@ public class Strategy {
         return estrategia.operar(a, b);
     }
 }
+
+// Ejemplo de uso del patrón Strategy
+class StrategyDemo {
+    public static void main(String[] args) {
+        Strategy contexto = new Strategy();
+        contexto.setEstrategia(new Suma());
+        System.out.println("Suma: " + contexto.ejecutarOperacion(5, 3));
+        contexto.setEstrategia(new Resta());
+        System.out.println("Resta: " + contexto.ejecutarOperacion(5, 3));
+    }
+}
